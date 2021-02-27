@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size:1rem;
+    color:#333333;
+}
+.container{
+    padding: 1em;
+}
+.row{
+    width:80%;
+    margin: 0 auto;
+    max-width: 1550px;
+    border:1px solid red;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+.recepie__pic img{
+    width:100%;
+    max-width: 100%;
+    border-radius: 5px;
+   
+}
+.recepie__pic{
+   
+     padding: 0.5em;
+}
+
+.hero{
+    padding:1em 0;
+}
+.recepie-title{
+    font-family: 'Playfair Display', serif;
+    font-size:24px;
+    line-height: 31.99px;
+    font-weight: 700;
+    padding: 0.5em 0;
+    
+}
+.recepie__description{
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.recepie__intro{
+    font-size:12px;
+    line-height: 14.63px;
+    font-weight: 500;
+    font-style: italic;
+    margin-left: 10px;
+    /* padding: 0 0.5em; */
+}
+.recepie__description svg{
+    flex-basis:20%;
+    margin-top:2px;
+}
+.cards__container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding: 0.5em;
+}
+.card{
+    display:flex;
+    align-items: center;
+    flex-basis:30%;
+}
+.card__text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.serving{
+    flex-basis: 100%;
+    margin-bottom: 1em;
+}
+.card__text span:first-child{
+  color:#bdbdbd;
+  font-size:8px;
+  line-height:9.75px;
+  font-style:normal;
+  font-weight: 700;
+}
+.card__text span:last-child{
+font-size:10px;
+line-height: 12.13px;
+}
+.serving span:first-child{
+  color:#f2994a;
+}
+.serving .card__text span:first-child{
+    text-transform: uppercase;
+}
+.content{
+    padding: 0.5em;
+}
+.content .steps__title{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 23.99px;
+    margin-bottom: 0.5em;
+}
+.items{
+     font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    line-height: 21.33px;
+    font-style: italic; 
+    margin:1em 0;
+}
+/* the real content of the page */
+.content ul{
+    margin-bottom: 0.5em 0;
+}
+.content li{
+    font-size:14px;
+    line-height: 25px;
+    margin-top: 0.8em;
+}
+.ingredients{
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+}
+.ingredients input{
+    margin-right: 5px;
+    width:20px;
+    height: 20px;
+}
+.instructions ol{
+    list-style-type: none;
+    padding: 1em;
+    counter-reset: list-number;
+}
+.instructions ol li{
+    margin-left: 22px;
+    padding: 0 10px;
+}
+.instructions ol li::before{
+    counter-increment: list-number;
+    content:counter(list-number);
+    width:40px;
+    height: 35px;
+    background-color:#f2994a;
+    margin-left: -35px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* display: inline-flex; */
+
+    color:#ffffff;
+    font-size:12px
+
+}
+
+@media screen and (min-width:768px){
+    .recepie-title{
+        font-size: 48px;
+        line-height: 64px;
+        
+    }
+    .recepie__description svg{
+    flex-basis:auto;
+    margin-top:2px;
+}
+    .recepie__intro{
+        font-size: 14px;
+        line-height: 17.07px;
+        max-width:650px;
+    }
+   .main__container{
+        display:flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding:1em 0;
+    }
+    .content{
+        flex:0 1 65%;
+        padding: 0.5em 0;
+    }
+    aside{
+        order:1;
+        
+        flex:0 1 20%;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        border-radius: 12px;
+    }
+    .cards__container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        //padding: 1em 2em;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .card{
+       // flex:1 1 100%;
+       flex-basis: auto;
+       width:100%;
+        
+        padding:1em 0;
+        justify-content:center;
+        margin-bottom: 1em;
+
+    }
+  
+    
+    .card__text span:first-child{
+                font-size:10px;
+                line-height:12.19px;
+
+}
+.card__text span:last-child{
+font-size:14px;
+line-height: 17.07px;
+
+}
+.content .steps__title{
+    font-size: 24px;
+    line-height: 32px;
+}
+.items{
+    font-size:16px;
+    line-height: 20px;
+}
+.content li{
+    font-size:16px;
+}
+.ingredients li{
+    line-height: 25px;
+}
+.instructions li{
+    line-height: 20px;
+    margin-bottom: 1em;
+}
+.instructions li:first-child{
+    margin-bottom: 2em;
+}
+.instructions ol li::before{
+    margin-bottom: 30px;
+}
+
+}
